@@ -1,13 +1,82 @@
-$font-inter: 'Inter', sans-serif;
-
-$gray: #f3f2f0;
-$black: #232326;
-$red: #d40000;
 $white: #ffffff;
-$bg-gray: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
+$blue: #2c3878;
+$gray: #9c9c9c;
+$black: #000000;
 
 $r_desk_hd: 1200px;
 $r_desk: 1000px;
 $r_tab: 768px;
 $r_tab_600: 600px;
 $r_tab_430: 430px;
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  background-color: $white;
+  font-weight: 400;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5vw;
+  margin: 4rem auto;
+  &__navigation {
+    padding-left: 20.2vw;
+  }
+  &__nav {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 26vw;
+  }
+  &__item {
+    cursor: pointer;
+    transition: 0.2s;
+    &.active {
+      font-weight: 600;
+    }
+    &:hover {
+      color: $blue;
+    }
+  }
+  &__tel {
+    text-decoration: none;
+    color: $white;
+    padding: 1.2rem 3rem;
+    border: 3px solid $blue;
+    font-weight: 500;
+    background-color: $blue;
+    transition: 0.2s;
+    line-height: 2.1rem;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}
+.logo {
+  text-decoration: none;
+  color: $black;
+  font-size: 3.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
