@@ -15,9 +15,11 @@
           <a href="#" class="logo">БК “Ясенево”</a>
           <nav class="header__navigation">
             <ul class="header__nav">
-              <li class="header__item active">Главная</li>
-              <li class="header__item">Расположение</li>
-              <li class="header__item">Планировки</li>
+              <li class="header__item">
+                <a href="#" class="active">Главная</a>
+              </li>
+              <li class="header__item"><a href="#">Расположение</a></li>
+              <li class="header__item"><a href="#">Планировки</a></li>
             </ul>
           </nav>
           <a href="tel:+74952214022" class="header__tel">+7 (495) 221-40-22</a>
@@ -160,7 +162,65 @@
           </div>
         </div>
       </section>
-      <section class="information"></section>
+      <section class="information">
+        <div class="container">
+          <div class="text">
+            <div class="text__heading">
+              <h3>Подробно</h3>
+              <div class="line line_heading"></div>
+            </div>
+            <h2>Вся информация о проекте — в&nbsp;презентации</h2>
+            <div class="information__list">
+              <ul>
+                <li>25 слайдов подробной информации</li>
+                <li>Инфраструктура, благоустройство, расположение</li>
+                <li>Инженерия, концепция и т.д.</li>
+              </ul>
+              <a href="#" download class="download"></a>
+            </div>
+          </div>
+          <a href="#" class="header__tel button" download
+            >Скачать презентацию</a
+          >
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__flex">
+            <p class="footer__text">
+              Подберем лучшее помещение под ваши задачи, основываясь на
+              аналитике бизнес-среды в локации.
+            </p>
+            <div class="footer__form">
+              <form action="#" class="form__body">
+                <div class="form_item">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Ваше имя"
+                  />
+                </div>
+                <div class="form_item">
+                  <input
+                    type="tel"
+                    class="form__input"
+                    placeholder="+7 987 654 32 10"
+                  />
+                </div>
+                <button type="submit" class="form__button header__tel">
+                  Получить консультацию
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="footer__flex footer__flex_bottom">
+            <p class="footer__text">БК “Ясенево”</p>
+            <a href="tel:+74952214022" class="footer__tel"
+              >+7 (495) 221-40-22</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
