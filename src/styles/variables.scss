@@ -6,8 +6,10 @@ $black: #000000;
 $r_desk_hd: 1200px;
 $r_desk: 1000px;
 $r_tab: 834px;
+$r_tab_700: 700px;
 $r_tab_600: 600px;
-$r_mob_430: 375px;
+$r_mob_440: 440px;
+$r_mob_375: 375px;
 
 html {
   font-size: 10px;
@@ -29,6 +31,9 @@ h1 {
   @media (max-width: $r_desk_hd) {
     font-size: calc((100vw - 834px) / (1440 - 834) * (7.2 - 4) + 4rem);
   }
+  @media (max-width: $r_tab_700) {
+    font-size: calc((100vw - 375px) / (834 - 375) * (4 - 2.4) + 2.4rem);
+  }
 }
 h2 {
   font-size: 5.2rem;
@@ -43,9 +48,9 @@ h3 {
   font-size: 3.6rem;
   font-weight: 600;
   margin: 0;
-  line-height: 5rem;
+  line-height: 140%;
   margin-top: 2rem;
-  @media (max-width: $r_tab_600) {
+  @media (max-width: $r_tab_700) {
     font-size: calc((100vw - 375px) / (834 - 375) * (3.6 - 2) + 2rem);
   }
 }
@@ -54,13 +59,18 @@ h4 {
   font-size: 1.6rem;
   font-weight: 500;
   margin: 0;
-  line-height: 2.4rem;
+  line-height: 150%;
+  flex-shrink: 0;
 }
 h5 {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 2.4rem;
   margin: 3.7rem 0 0;
+  @media (max-width: $r_mob_440) {
+    margin: 1.5rem 0 0;
+    font-size: 1.8rem;
+  }
 }
 p {
   color: $gray;
@@ -83,6 +93,18 @@ p {
   @media (max-width: $r_tab) {
     max-width: 734px;
   }
+  @media (max-width: $r_tab_700) {
+    max-width: 525px;
+  }
+  @media (max-width: $r_tab_600) {
+    max-width: 470px;
+  }
+  @media (max-width: $r_mob_440) {
+    max-width: 400px;
+  }
+  @media (max-width: $r_mob_375) {
+    max-width: 346px;
+  }
 }
 .header {
   font-size: 1.6rem;
@@ -98,6 +120,9 @@ p {
     padding-left: 20.2vw;
     @media (max-width: $r_desk_hd) {
       padding: 0;
+    }
+    @media (max-width: $r_tab_700) {
+      display: none;
     }
   }
   &__nav {
@@ -176,6 +201,7 @@ p {
     right: 14rem;
     z-index: 1;
     gap: 6rem;
+    text-align: center;
     @media (max-width: $r_desk_hd) {
       flex-direction: row;
       width: 100%;
@@ -183,6 +209,9 @@ p {
       position: initial;
       justify-content: space-around;
       padding: 4rem 0;
+    }
+    @media (max-width: $r_tab_700) {
+      padding: 1rem 0;
     }
     &_location {
       bottom: 53rem;
@@ -195,7 +224,11 @@ p {
         text-align: center;
       }
       @media (max-width: $r_tab) {
-        width: 23.6rem;
+        width: 23.6vw;
+      }
+      @media (max-width: $r_tab_700) {
+        width: 16.6vw;
+        padding: 5rem 0;
       }
     }
     &_layouts {
@@ -212,7 +245,14 @@ p {
         width: 20vw;
       }
       @media (max-width: $r_tab) {
-        width: 23.6rem;
+        width: 23.6vw;
+      }
+      @media (max-width: $r_tab_700) {
+        width: 17.6vw;
+        padding: 5rem 0;
+      }
+      @media (max-width: $r_tab_600) {
+        width: 26.6vw;
       }
     }
     &_item {
@@ -222,11 +262,17 @@ p {
       @media (max-width: $r_desk_hd) {
         font-size: calc((100vw - 834px) / (1440 - 834) * (4.8 - 4) + 4rem);
       }
+      @media (max-width: $r_tab) {
+        font-size: calc((100vw - 375px) / (834 - 375) * (4 - 2) + 2rem);
+      }
 
       & span {
         font-size: 1.6rem;
         line-height: 160%;
         display: block;
+        @media (max-width: $r_tab) {
+          font-size: calc((100vw - 375px) / (834 - 375) * (1.6 - 1.1) + 1.1rem);
+        }
       }
       &:nth-child(1) {
         margin-top: 4.5rem;
@@ -250,7 +296,10 @@ p {
     margin-bottom: 10rem;
     @media (max-width: $r_desk_hd) {
       height: calc((100vw - 834px) / (1440 - 834) * (60 - 40) + 40rem);
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: $r_tab_700) {
+      height: 30rem;
     }
     & img {
       position: absolute;
@@ -263,11 +312,20 @@ p {
       @media (max-width: $r_desk_hd) {
         height: calc((100vw - 834px) / (1440 - 834) * (60 - 40) + 40rem);
       }
+      @media (max-width: $r_tab_700) {
+        height: 30rem;
+      }
     }
     &_2 {
       height: 43rem;
+      @media (max-width: $r_tab) {
+        height: calc((100vw - 375px) / (834 - 375) * (43 - 25) + 25rem);
+      }
       & img {
         height: 43rem;
+        @media (max-width: $r_tab) {
+          height: calc((100vw - 375px) / (834 - 375) * (43 - 25) + 25rem);
+        }
       }
     }
     &_3 {
@@ -281,6 +339,9 @@ p {
           height: calc(
             (100vw - 834px) / (1440 - 834) * (82.5 - 57.4) + 57.4rem
           );
+        }
+        @media (max-width: $r_desk_hd) {
+          height: calc((100vw - 375px) / (834 - 375) * (57.4 - 50) + 50rem);
         }
       }
     }
@@ -308,6 +369,10 @@ p {
     &_layouts {
       flex-basis: 59%;
     }
+    @media (max-width: $r_tab_700) {
+      flex-basis: 100%;
+      margin-bottom: 2rem;
+    }
   }
 }
 .line {
@@ -328,12 +393,18 @@ p {
   @media (max-width: $r_desk_hd) {
     max-width: 87%;
   }
+  @media (max-width: $r_tab_700) {
+    max-width: 100%;
+  }
   &__heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     &_shortline {
       max-width: 60%;
+      @media (max-width: $r_tab_700) {
+        max-width: 100%;
+      }
     }
   }
   & p {
@@ -359,6 +430,7 @@ p {
     justify-content: space-around;
     padding: 3.4rem 0rem;
     margin-bottom: 9.5rem;
+
     &_left {
       flex-basis: 31vw;
       @media (max-width: $r_desk) {
@@ -382,6 +454,9 @@ p {
       padding: 3.4rem 6.8rem;
       gap: 2.5rem;
     }
+    @media (max-width: $r_tab_700) {
+      padding: 1rem 2rem;
+    }
   }
   &__list {
     list-style-type: none;
@@ -395,6 +470,9 @@ p {
     display: flex;
     align-items: center;
     gap: 30px;
+    @media (max-width: $r_tab_700) {
+      font-size: calc((100vw - 375px) / (834 - 375) * (2 - 1.6) + 1.6rem);
+    }
     &::before {
       content: '';
       display: block;
@@ -404,6 +482,14 @@ p {
       width: 10rem;
       border-radius: 100%;
       flex-shrink: 0;
+      @media (max-width: $r_tab_700) {
+        height: 8rem;
+        width: 8rem;
+      }
+      @media (max-width: $r_mob_440) {
+        height: 7rem;
+        width: 7rem;
+      }
     }
     &_1::before {
       background-image: url(/src/images/about_1.png);
@@ -462,6 +548,10 @@ p {
 .button {
   padding: 1.4rem 3.2rem;
   align-self: flex-start;
+  @media (max-width: $r_mob_440) {
+    display: flex;
+    justify-content: center;
+  }
 }
 .infrastructure {
   margin-bottom: 11.3rem;
@@ -492,16 +582,23 @@ p {
         grid-column: 1 / 3;
         grid-row: 1 / 2;
         background-image: url(/src/images/grid-1.png);
+        min-height: 30rem;
       }
       & .grid-box:nth-child(2) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
         background-image: url(/src/images/grid-2.png);
+        min-height: 30rem;
       }
       & .grid-box:nth-child(3) {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         background-image: url(/src/images/grid-3.png);
+        min-height: 30rem;
+      }
+      @media (max-width: $r_mob_440) {
+        display: flex;
+        flex-direction: column;
       }
     }
     &_right {
@@ -510,16 +607,23 @@ p {
         grid-column: 1 / 2;
         grid-row: 1 / 3;
         background-image: url(/src/images/grid-4.png);
+        min-height: 61rem;
       }
       & .grid-box:nth-child(2) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         background-image: url(/src/images/grid-5.png);
+        min-height: 30rem;
       }
       & .grid-box:nth-child(3) {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         background-image: url(/src/images/grid-6.png);
+        min-height: 30rem;
+      }
+      @media (max-width: $r_mob_440) {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -556,11 +660,21 @@ p {
       max-width: 100%;
       width: 100%;
     }
+    @media (max-width: $r_tab_700) {
+      flex-direction: column;
+      align-items: initial;
+      gap: 2.5rem;
+      margin-bottom: 5rem;
+    }
     & ul {
       color: $gray;
-      line-height: 2.88rem;
+      line-height: 160%;
       max-width: 50vw;
       margin: 0;
+      @media (max-width: $r_tab_700) {
+        max-width: 100%;
+        margin-top: 2rem;
+      }
     }
   }
 }
@@ -573,6 +687,10 @@ p {
   transform: scale(1);
   opacity: 0.8;
   transition: 0.3s;
+  @media (max-width: $r_tab) {
+    width: 11.3rem;
+    height: 11.3rem;
+  }
   &:hover {
     transform: scale(1.1);
     opacity: 1;
@@ -581,12 +699,19 @@ p {
 .footer {
   background-color: $blue;
   padding: 7.7rem 0 4rem;
+  @media (max-width: $r_tab) {
+    padding-left: 1rem;
+  }
+
   &__text {
     color: $white;
     font-weight: 600;
     font-size: 3.2rem;
-    line-height: 3.84rem;
+    line-height: 120%;
     flex-basis: 48%;
+    @media (max-width: $r_tab) {
+      font-size: calc((100vw - 375px) / (834 - 375) * (3.2 - 2.4) + 2.4rem);
+    }
   }
   &__flex {
     display: flex;
@@ -594,13 +719,29 @@ p {
     @media (max-width: $r_desk_hd) {
       align-items: center;
     }
-
+    @media (max-width: $r_tab_700) {
+      flex-direction: column;
+      align-items: initial;
+    }
+    @media (max-width: $r_tab_600) {
+      max-width: 90%;
+    }
     &_bottom {
       align-items: center;
       margin: 11rem auto 5rem;
       @media (max-width: $r_desk_hd) {
         align-items: center;
         margin: 7rem auto 3rem;
+      }
+      @media (max-width: $r_tab_700) {
+        align-items: initial;
+        gap: 1rem;
+        margin: 7rem 0 3rem;
+      }
+      & .footer__text {
+        @media (max-width: $r_tab_700) {
+          order: 2;
+        }
       }
     }
   }
@@ -619,6 +760,12 @@ p {
     font-weight: 500;
     transform: scale(1);
     transition: 0.3s;
+    @media (max-width: $r_tab) {
+      font-size: calc((100vw - 375px) / (834 - 375) * (3.2 - 2.4) + 2.4rem);
+    }
+    @media (max-width: $r_tab_700) {
+      order: 1;
+    }
     &:hover {
       transform: scale(1.1);
     }
@@ -640,6 +787,9 @@ p {
     max-width: 25rem;
     border: 3px solid $white;
     transition: 0.3s;
+    @media (max-width: $r_tab_700) {
+      padding: 1rem;
+    }
     &:hover {
       background-color: $blue;
       color: $white;
@@ -651,6 +801,7 @@ p {
     padding: 12px;
     width: 100%;
     font-size: 1.6rem;
+    box-sizing: border-box;
     color: $white;
     &:focus {
       outline: none;
@@ -665,6 +816,9 @@ input:-moz-placeholder {
 }
 .rooms {
   margin-bottom: 15rem;
+  @media (max-width: $r_tab) {
+    margin-bottom: 14rem;
+  }
   &__container {
     display: grid;
     place-items: center;
@@ -672,6 +826,10 @@ input:-moz-placeholder {
     grid-template-columns: repeat(3, 1fr);
     @media (max-width: $r_desk) {
       grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $r_mob_440) {
+      display: flex;
+      flex-direction: column;
     }
   }
   &__grid {
@@ -681,6 +839,12 @@ input:-moz-placeholder {
         margin-bottom: 4rem;
         max-width: 34rem;
         min-height: 11rem;
+        @media (max-width: $r_tab_600) {
+          font-size: 1.4rem;
+        }
+        @media (max-width: $r_mob_440) {
+          min-height: 6rem;
+        }
       }
     }
   }
@@ -697,6 +861,21 @@ input:-moz-placeholder {
       object-fit: contain;
       width: 100%;
       height: 34rem;
+    }
+  }
+}
+.navigation__button {
+  @media (min-width: $r_tab_700) {
+    display: none;
+  }
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  & .header__tel {
+    flex-basis: 37%;
+    text-align: center;
+    @media (max-width: $r_tab_600) {
+      flex-basis: 30%;
     }
   }
 }
