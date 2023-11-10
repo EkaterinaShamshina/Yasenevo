@@ -100,10 +100,7 @@ p {
     max-width: 470px;
   }
   @media (max-width: $r_mob_440) {
-    max-width: 400px;
-  }
-  @media (max-width: $r_mob_375) {
-    max-width: 346px;
+    max-width: calc((100vw - 375px) / (440 - 375) * (390 - 345) + 345px);
   }
 }
 .header {
