@@ -158,22 +158,6 @@ p {
       }
     }
   }
-  &__tel {
-    text-decoration: none;
-    color: $white;
-    padding: 1.2rem 3rem;
-    border: 3px solid $blue;
-    font-weight: 500;
-    background-color: $blue;
-    transition: 0.2s;
-    line-height: 2.1rem;
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    &:hover {
-      background-color: $white;
-      color: $blue;
-    }
-  }
 }
 .logo {
   text-decoration: none;
@@ -322,23 +306,6 @@ p {
         height: 43rem;
         @media (max-width: $r_tab) {
           height: calc((100vw - 375px) / (834 - 375) * (43 - 25) + 25rem);
-        }
-      }
-    }
-    &_3 {
-      height: 82.5rem;
-      @media (max-width: $r_desk_hd) {
-        height: calc((100vw - 834px) / (1440 - 834) * (82.5 - 57.4) + 57.4rem);
-      }
-      & img {
-        height: 82.5rem;
-        @media (max-width: $r_desk_hd) {
-          height: calc(
-            (100vw - 834px) / (1440 - 834) * (82.5 - 57.4) + 57.4rem
-          );
-        }
-        @media (max-width: $r_desk_hd) {
-          height: calc((100vw - 375px) / (834 - 375) * (57.4 - 50) + 50rem);
         }
       }
     }
@@ -542,14 +509,7 @@ p {
     }
   }
 }
-.button {
-  padding: 1.4rem 3.2rem;
-  align-self: flex-start;
-  @media (max-width: $r_mob_440) {
-    display: flex;
-    justify-content: center;
-  }
-}
+
 .infrastructure {
   margin-bottom: 11.3rem;
   &__flex {
@@ -783,6 +743,30 @@ p {
     }
   }
 }
+.button__link {
+  text-decoration: none;
+  color: $white;
+  padding: 1.2rem 3rem;
+  border: 3px solid $blue;
+  font-weight: 500;
+  background-color: $blue;
+  transition: 0.2s;
+  line-height: 2.1rem;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
+.button {
+  padding: 1.4rem 3.2rem;
+  align-self: flex-start;
+  @media (max-width: $r_mob_440) {
+    display: flex;
+    justify-content: center;
+  }
+}
 .form {
   &__body {
     display: flex;
@@ -883,11 +867,14 @@ input:-moz-placeholder {
   display: flex;
   justify-content: space-between;
   margin-bottom: 6rem;
-  & .header__tel {
+  & .button__link {
     flex-basis: 37%;
     text-align: center;
     @media (max-width: $r_tab_600) {
       flex-basis: 30%;
     }
   }
+}
+.map {
+  margin-bottom: 4rem;
 }
